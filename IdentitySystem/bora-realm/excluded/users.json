@@ -1,0 +1,24 @@
+[
+  {
+    "username": "lucasfogliarini",
+    "enabled": true,
+    "emailVerified": true,
+    "firstName": "Lucas",
+    "lastName": "Fogliarini",
+    "email": "lucasfogliarini@gmail.com",
+    "federatedIdentities": [
+      {
+        "identityProvider": "google",
+        "userId": "103345722380657378590",
+        "userName": "lucasfogliarini@gmail.com"
+      }
+    ],
+    "realmRoles": [ "default-roles-bora-realm", "default-roles-bora" ],
+    "clientRoles": {
+      "realm-management": [
+        "realm-admin"
+      ]
+    },
+    "requiredActions": []
+  }
+]

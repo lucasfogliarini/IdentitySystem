@@ -1,0 +1,21 @@
+[
+  {
+    "alias": "google",
+    "displayName": "Logar com o Google",
+    "internalId": "84e59f62-9312-4362-906e-3ec98d0a6105",
+    "providerId": "google",
+    "enabled": true,
+    "updateProfileFirstLoginMode": "on",
+    "trustEmail": false,
+    "storeToken": false,
+    "addReadTokenRoleOnCreate": false,
+    "authenticateByDefault": false,
+    "linkOnly": false,
+    "hideOnLogin": false,
+    "config": {
+      "syncMode": "IMPORT",
+      "clientId": "555944887926-tvf226l5sqn4ltrjuq5egujnuidvt8sd.apps.googleusercontent.com",
+      "googleClientUrl": "https://console.cloud.google.com/auth/clients/555944887926-tvf226l5sqn4ltrjuq5egujnuidvt8sd.apps.googleusercontent.com?project=bora-earth"
+    }
+  }
+]

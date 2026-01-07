@@ -1,13 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <Sdk Name="Aspire.AppHost.Sdk" Version="9.5.0" />
-
+  <Sdk Name="Aspire.AppHost.Sdk" Version="13.1.0" />
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+    <AssemblyName>IdentitySystem</AssemblyName>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <UserSecretsId>2f9cf83e-caa9-492f-8945-4d1591b622f5</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

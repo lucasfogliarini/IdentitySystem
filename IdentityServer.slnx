@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="IdentityServer.AppHost/IdentityServer.AppHost.csproj" />
-  <Project Path="IdentityServer.ServiceDefaults/IdentityServer.ServiceDefaults.csproj" />
-</Solution>
