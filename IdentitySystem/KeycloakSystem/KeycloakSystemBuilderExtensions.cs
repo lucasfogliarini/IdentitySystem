@@ -13,7 +13,7 @@ public static class KeycloakSystemBuilderExtensions
             .WaitFor(keycloakDatabase)
             //.WithLifetime(ContainerLifetime.Persistent)
             .WithDataVolume($"{system.MainService.Name}_data")
-            .WithImport("bora-realm")
+            .WithImport("KeycloakSystem/bora-realm")
             .WithEnvironment("KC_BOOTSTRAP_ADMIN_USERNAME", "admin")
             .WithEnvironment("KC_BOOTSTRAP_ADMIN_PASSWORD", "admin")
 
