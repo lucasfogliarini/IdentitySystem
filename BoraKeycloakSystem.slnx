@@ -2,5 +2,5 @@
   <Folder Name="/docs/">
     <File Path="README.md" />
   </Folder>
-  <Project Path="IdentitySystem/IdentitySystem.csproj" />
+  <Project Path="BoraKeycloakSystem/BoraKeycloakSystem.csproj" />
 </Solution>
