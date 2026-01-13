@@ -9,7 +9,7 @@ public class Service
     public string Host { get; set; } = "localhost";
     public int Port { get; set; } = 2000;
     public Uri Uri => new($"{Scheme}://{Host}:{Port}");
-    
+
 }
 public class Service<TResource> : Service where TResource : Resource
 {
@@ -55,23 +55,22 @@ public abstract class SoftwareSystem(IDistributedApplicationBuilder builder, int
         return system.Resource;
     }
 
-    public Service<Resource> AddService(string sufixName, int? servicePort = null)
+    public Service<Resource> AddService(string name, int? servicePort = null)
     {
-        return AddService<Service<Resource>>(sufixName, servicePort);
+        return AddService<Service<Resource>>(name, servicePort);
     }
-    public TService AddService<TService>(string sufixName, int? servicePort = null) where TService : Service
+    public TService AddService<TService>(string name, int? servicePort = null) where TService : Service
     {
         servicePort ??= Services.Any() ? Services.Max(e => e.Port) + 1 : Port + 1;
-        var serviceName = $"{Name}-{sufixName}";
         var service = Activator.CreateInstance<TService>();
         service.Port = servicePort.Value;
-        service.Name = serviceName;
+        service.Name = name;
         Services.Add(service);
         return service;
     }
-    public TService? GetService<TService>() where TService : Service
+    public TService? GetService<TService>(string? name = null) where TService : Service
     {
-        return Services.OfType<TService>().FirstOrDefault();
+        return Services.OfType<TService>().FirstOrDefault(e => name == null || e.Name == name);
     }
 
     public static TSystem CreateBuilder<TSystem>() where TSystem : SoftwareSystem
