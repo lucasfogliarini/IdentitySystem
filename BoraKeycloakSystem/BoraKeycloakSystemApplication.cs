@@ -5,11 +5,8 @@
 //using Aspire.Hosting.ApplicationModel;
 //using Microsoft.Extensions.DependencyInjection;
 
-var builder = DistributedApplication.CreateBuilder(args);
+var boraKeycloakSystem = SoftwareSystem.CreateBuilder<BoraKeycloakSystem>();
 
-builder.AddBoraKeycloakSystem()
-       .AddToAspire();
-
-var app = builder.Build();
+var app = boraKeycloakSystem.Builder.Build();
 
 await app.RunAsync();
